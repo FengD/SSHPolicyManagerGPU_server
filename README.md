@@ -14,6 +14,7 @@
 
 ## 2.2. Files
 
+``` bash
 .
 ├── docs
 │   ├── menu1.png
@@ -22,6 +23,7 @@
 └── scripts
     ├── create_container.sh (the script which used to create the docker container)
     └── ssh_interactive_script.sh (the script which used to give the interactive menu)
+```
 
 ## 2.3. Dependensies
 
@@ -63,7 +65,7 @@ Match User
 
 * `ssh_port`: Used for ssh login.
 * `custom_port`: Used for custom usage.
-* `user`: the name of the user. Used for data transform from container to host. It will create a folder in /data/datasets/users/ with the name of the username given. ==If you want to use other storage, you could mount the storage and create the folder in the volume==. Gives user docker group rights. ==sudo usermod -aG docker ${USER}==
-* `image tag`: the tag of the docker image. ==The namespace of the image should be the same as it is in the create command part==.
+* `user`: the name of the user. Used for data transform from container to host. It will create a folder in /data/datasets/users/ with the name of the username given. `If you want to use other storage, you could mount the storage and create the folder in the volume`. Gives user docker group rights. `sudo usermod -aG docker ${USER}`
+* `image tag`: the tag of the docker image. `The namespace of the image should be the same as it is in the create command part`.
 * `ai_data`: whether mount a read-only data volume.
 * `option`: custom create container options.
